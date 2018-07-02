@@ -1,0 +1,24 @@
+import base64
+import hmac, hashlib
+
+policy_document = \
+b"""
+{
+"expiration": "2018-08-01T00:00:00Z",
+  "conditions": [
+    {"bucket": "mariuszproject"},
+    ["starts-with", "$key", "images/"],
+    {"acl": "public-read"},
+    {"success_action_redirect": "http://ProjectLB-1760943877.us-west-2.elb.amazonaws.com/uploaded"},
+    ["starts-with", "$Content-Type", "image/"],
+    ["content-length-range", 0, 1048576]
+  ]
+}
+"""
+
+policy = base64.b64encode(policy_document)
+
+signature = base64.b64encode(hmac.new(b'<secret_key>', policy, hashlib.sha1).digest())
+
+print(policy)
+print(signature)

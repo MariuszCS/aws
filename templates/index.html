@@ -1,0 +1,21 @@
+<html>
+  <head>
+    
+        
+  </head>
+  <body>
+
+  <form action="http://mariuszproject.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="awsaccesskeyid" value="AKIAIQTUSDTSOQXTTS6A"/> 
+    <input type="hidden"  name="key" value="images/${filename}" />
+    <input type="hidden" name="acl" value="public-read" />
+    <input type="hidden" name="success_action_redirect" value="http://ProjectLB-1760943877.us-west-2.elb.amazonaws.com/uploaded" />
+    <input type="hidden"  name="Content-Type" value="image/png" />
+    <input type="hidden" name="Policy" value="CnsKImV4cGlyYXRpb24iOiAiMjAxOC0wOC0wMVQwMDowMDowMFoiLAogICJjb25kaXRpb25zIjogWwogICAgeyJidWNrZXQiOiAibWFyaXVzenByb2plY3QifSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJGtleSIsICJpbWFnZXMvIl0sCiAgICB7ImFjbCI6ICJwdWJsaWMtcmVhZCJ9LAogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwOi8vUHJvamVjdExCLTE3NjA5NDM4NzcudXMtd2VzdC0yLmVsYi5hbWF6b25hd3MuY29tL3VwbG9hZGVkIn0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiRDb250ZW50LVR5cGUiLCAiaW1hZ2UvIl0sCiAgICBbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwgMCwgMTA0ODU3Nl0KICBdCn0K" />
+    <input type="hidden" name="Signature" value="mQRo2w/q1fCU5bR+UXW1svSr88M=" />
+    <input type="file"   name="file" /> <br />
+    <!-- The elements after this will be ignored -->
+    <input type="submit" name="submit" value="Upload" />
+  </form>
+  
+</html>
