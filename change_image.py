@@ -5,7 +5,7 @@ import skimage.transform
 import os
 import datetime
 
-sqs = boto3.resource("sqs")
+sqs = boto3.resource("sqs", region_name='us-west-2')
 queue = sqs.get_queue_by_name(QueueName="ProjectQueue")
 s3 = boto3.resource('s3')
 simpledb = boto3.client("sdb")
